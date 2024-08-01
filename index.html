@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What tile do I clock out?</title>
+    <style>
+      body {
+          display: flex;
+          height: 100vh;
+          margin: 0;
+      }
+      .left, .right {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .left {
+          flex-direction: column;
+      }
+      .left input, .left button {
+          margin: 10px 0;
+      }
+  </style>
+</head>
+<body>
+    <div class="left">
+      <fieldset class="left">
+        <label>Time In: </label>
+        <input type="time" placeholder="Time In" id="time-in" />
+        <label>Work Hours: </label>
+        <input type="number" placeholder="Work hours" id="work-hours" />
+      </fieldset>
+    </div>
+    <div class="right">
+        <!-- Right side content -->
+        <div>
+          <h2>I should clock out at:</h2>
+          <h1 id="timeout">----</h1>
+          <h1 id="twelve-hour-timeout">----</h1>
+        </div>
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>
