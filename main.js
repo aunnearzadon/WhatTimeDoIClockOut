@@ -45,7 +45,7 @@ const formatMinutes = (minutes) => {
 
 const format12Hours = (time) => {
   let {hours, minutes} = splitTime(time)
-  let ampm = hours > 12 ? 'pm': 'am'
+  let ampm = hours >= 12 ? 'pm': 'am'
   hours = hours > 12 ? hours - 12 : hours
   hours = hours == 0 ? 12 : hours
 
